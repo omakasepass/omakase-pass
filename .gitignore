@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs & environment
+*.log
+.env
+.env.*
+
+# Dependency folders (not used here, but safe to ignore)
+node_modules/
+
+# Vercel
+.vercel/

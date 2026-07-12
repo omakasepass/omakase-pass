@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       PAGE TITLE & DESCRIPTION (what shows in the browser tab and
+       in Google search results)
+       ============================================================ -->
+  <title>The Omakase Pass | Private Sushi &amp; Omakase Chefs — Nashville</title>
+  <meta name="description" content="Nashville's vetted collective of independent sushi chefs for private, in-home omakase experiences. Join the waitlist." />
+  <link rel="canonical" href="https://theomakasepass.com/" />
+
+  <!-- ============================================================
+       OPEN GRAPH (controls the preview card when the link is shared
+       on Facebook, iMessage, LinkedIn, etc.)
+       NOTE: supply a 1200x630 image at /images/og.jpg before launch.
+       ============================================================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Omakase Pass" />
+  <meta property="og:title" content="The Omakase Pass — Private Omakase, Made Once, For You" />
+  <meta property="og:description" content="Nashville's finest independent sushi chefs, at your table. A true omakase experience — without the restaurant, and without the $2,000 minimum." />
+  <meta property="og:url" content="https://theomakasepass.com/" />
+  <meta property="og:image" content="https://theomakasepass.com/images/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- ============================================================
+       TWITTER / X CARD
+       ============================================================ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Omakase Pass — Private Omakase, Made Once, For You" />
+  <meta name="twitter:description" content="Nashville's finest independent sushi chefs, at your table. A true omakase experience — without the restaurant, and without the $2,000 minimum." />
+  <meta name="twitter:image" content="https://theomakasepass.com/images/og.jpg" />
+
+  <!-- ============================================================
+       FAVICON (the little icon in the browser tab)
+       ============================================================ -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- ============================================================
+       FONTS (Google Fonts: Fraunces for headlines, Instrument Sans
+       for everything else). Preconnect speeds up loading.
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ============================================================
+       ANALYTICS — CHOOSE ONE (both are inert until you edit them):
+
+       OPTION A — Plausible (privacy-friendly, recommended). To turn on:
+       1. Create an account at plausible.io and add the site
+          "theomakasepass.com".
+       2. Uncomment the line below (delete the <!-- and --> around it).
+       ============================================================ -->
+  <!-- <script defer data-domain="theomakasepass.com" src="https://plausible.io/js/script.js"></script> -->
+
+  <!-- OPTION B — Google Analytics 4 (alternative). To turn on:
+       1. Create a GA4 property at analytics.google.com and copy your
+          Measurement ID (looks like G-XXXXXXXXXX).
+       2. Replace G-XXXXXXXXXX below in BOTH places, then uncomment.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- ============================================================
+       LOCAL BUSINESS SCHEMA (helps Google understand who/where you
+       are — improves local search results)
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Omakase Pass",
+    "description": "Nashville's vetted collective of independent sushi chefs for private, in-home omakase experiences.",
+    "url": "https://theomakasepass.com",
+    "email": "hello@theomakasepass.com",
+    "image": "https://theomakasepass.com/images/og.jpg",
+    "areaServed": {
+      "@type": "City",
+      "name": "Nashville"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nashville",
+      "addressRegion": "TN",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://instagram.com/omakasepass",
+      "https://tiktok.com/@omakasepass"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Skip link for keyboard users: jumps straight to main content -->
+  <a class="skip-link" href="#waitlist">Skip to waitlist</a>
+
+  <!-- ============================================================
+       1. HERO
+       ============================================================ -->
+  <header class="hero" id="top">
+    <!-- Full-bleed background image.
+         TODO: supply a licensed stock photo at /images/hero.jpg —
+         a dark/moody macro shot of a single piece of nigiri, in the
+         style of omakasetableatl.com. Until then a dark indigo
+         wash shows behind the overlay. -->
+    <div class="hero__bg" role="img" aria-label="A single piece of nigiri, dark and moody"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__inner">
+      <div class="wordmark reveal-hero">The Omakase Pass</div>
+
+      <div class="hero__content">
+        <h1 class="hero__headline reveal-hero">Made once. For you.</h1>
+        <p class="hero__subhead reveal-hero">
+          Nashville's finest independent sushi chefs, at your table. A true omakase
+          experience — without the restaurant, and without the $2,000 minimum.
+        </p>
+        <a class="btn btn--primary reveal-hero" href="#waitlist" data-scroll>Join the Waitlist</a>
+      </div>
+    </div>
+
+    <!-- Subtle scroll cue -->
+    <a class="scroll-cue" href="#proposition" data-scroll aria-label="Scroll down">
+      <span class="scroll-cue__line"></span>
+    </a>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         2. THE PROPOSITION
+         ============================================================ -->
+    <section class="section proposition" id="proposition">
+      <div class="prose reveal">
+        <p class="eyebrow">Ichi-go ichi-e — One time, one meeting</p>
+        <p>
+          In Japan, omakase is built on a simple covenant: the guest entrusts the meal
+          to the chef, and the chef answers with the best of that day — that fish, that
+          season, that moment. The tradition carries a name for it: <em>ichi-go ichi-e</em>.
+          One time, one meeting. A meal that will never happen the same way twice.
+        </p>
+        <p>
+          The Omakase Pass brings that moment to your table. We work with a small, vetted
+          collective of Nashville's most talented independent sushi chefs and match one to
+          your occasion. No restaurant reservation six weeks out. No traveling celebrity
+          chef's calendar. Just a craftsman, your kitchen, and an evening made once — for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. THE EXPERIENCES — the two "Pass" cards
+         ============================================================ -->
+    <section class="section experiences" id="experiences">
+      <div class="container">
+        <div class="cards">
+
+          <!-- Card 1 — Nº 001 -->
+          <article class="pass-card reveal">
+            <div class="pass-card__media">
+              <!-- TODO: supply /images/tasting.jpg — a plated multi-course
+                   tasting, intimate and moody. -->
+              <div class="pass-card__img pass-card__img--tasting" role="img" aria-label="A plated multi-course omakase tasting"></div>
+            </div>
+            <div class="pass-card__body">
+              <div class="pass-card__eyebrow">
+                <span>Omakase Pass · Nashville · Nº 001</span>
+                <!-- Hanko stamp: settles into place on scroll -->
+                <span class="hanko" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" width="100%" height="100%">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="4" />
+                    <text x="50" y="50" text-anchor="middle" dominant-baseline="central" class="hanko__text">OP</text>
+                  </svg>
+                </span>
+              </div>
+              <h2 class="pass-card__title">The Omakase Tasting</h2>
+              <p class="pass-card__desc">
+                A seated, chef-curated tasting menu prepared course by course in front of
+                you. Nigiri, sashimi, and seasonal plates — the full counter experience,
+                at your table.
+              </p>
+              <p class="pass-card__price">From $130 per person · parties of 4–12</p>
+              <p class="pass-card__note">Anniversaries · rehearsal dinners · milestone birthdays · client dinners</p>
+              <a class="btn btn--primary" href="#waitlist" data-scroll>Reserve Interest</a>
+            </div>
+          </article>
+
+          <!-- Card 2 — Nº 002 -->
+          <article class="pass-card reveal">
+            <div class="pass-card__media">
+              <!-- TODO: supply /images/party.jpg — a livelier rolling
+                   station, hands working, sushi in progress. -->
+              <div class="pass-card__img pass-card__img--party" role="img" aria-label="A live sushi station with a chef working"></div>
+            </div>
+            <div class="pass-card__body">
+              <div class="pass-card__eyebrow">
+                <span>Omakase Pass · Nashville · Nº 002</span>
+                <span class="hanko" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" width="100%" height="100%">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="4" />
+                    <text x="50" y="50" text-anchor="middle" dominant-baseline="central" class="hanko__text">OP</text>
+                  </svg>
+                </span>
+              </div>
+              <h2 class="pass-card__title">The Sushi Party</h2>
+              <p class="pass-card__desc">
+                A live sushi station and a chef working the room. Handrolls, nigiri, and
+                platters made continuously — social, abundant, and unhurried.
+              </p>
+              <p class="pass-card__price">From $85 per person · parties of 8–25</p>
+              <p class="pass-card__note">Bachelorette weekends · birthdays · celebrations of any kind</p>
+              <a class="btn btn--primary" href="#waitlist" data-scroll>Reserve Interest</a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="pricing-note">
+          Founding pricing for our first Nashville events. Final quotes depend on menu and party size.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. TRUST BLOCK
+         ============================================================ -->
+    <section class="section trust" id="trust">
+      <div class="prose reveal">
+        <h2 class="trust__headline">A vetted collective. Not a marketplace.</h2>
+        <p>
+          Every chef on The Omakase Pass is independently vetted — for skill, for sourcing,
+          and for the kind of hospitality that can't be faked. We'd rather represent five
+          exceptional chefs than fifty adequate ones.
+        </p>
+
+        <!-- Real founding-chef cards will slot into this row later
+             without any redesign needed. -->
+        <div class="chef-row">
+          <!-- founding chef cards go here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. HOW IT WORKS — 3 steps, revealed in sequence
+         ============================================================ -->
+    <section class="section how" id="how">
+      <div class="container">
+        <ol class="steps">
+          <li class="step reveal-step">
+            <span class="step__num">1</span>
+            <h3 class="step__title">Tell us the occasion.</h3>
+            <p class="step__text">Date, party size, and what you're celebrating.</p>
+          </li>
+          <li class="step reveal-step">
+            <span class="step__num">2</span>
+            <h3 class="step__title">We match your chef.</h3>
+            <p class="step__text">One of our vetted Nashville chefs, confirmed for your date.</p>
+          </li>
+          <li class="step reveal-step">
+            <span class="step__num">3</span>
+            <h3 class="step__title">They come to you.</h3>
+            <p class="step__text">Sourcing, preparation, service, and cleanup — handled. Your only job is to be present.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. WAITLIST FORM — the conversion point
+         ============================================================ -->
+    <section class="section waitlist" id="waitlist">
+      <div class="prose">
+        <h2 class="waitlist__headline reveal">Be first at the table.</h2>
+        <p class="waitlist__sub reveal">
+          We're opening our first Nashville dates soon. Join the waitlist and we'll reach out personally.
+        </p>
+
+        <!-- ============================================================
+             TALLY FORM EMBED
+             ------------------------------------------------------------
+             STEP 1 — Create the form:
+               Go to tally.so, create a new form, and add EXACTLY these
+               fields:
+                 • Name          (short text, required)
+                 • Email         (email, required)
+                 • Phone         (short text / phone, optional)
+                 • Occasion      (dropdown: Anniversary / Birthday /
+                                  Bachelorette / Rehearsal dinner /
+                                  Corporate / Other)
+                 • Party size    (dropdown: 4–6 / 7–12 / 13–25 / 25+)
+                 • Ideal timing  (dropdown: Next 30 days / 1–3 months /
+                                  Just curious)
+
+             STEP 2 — Publish it, then copy the form ID from its URL.
+               A Tally URL looks like  https://tally.so/r/wABCDE
+               The part after /r/  (here: wABCDE) is your TALLY_FORM_ID.
+
+             STEP 3 — Delete the placeholder form below, then delete the
+               <!-- --> around the iframe and replace TALLY_FORM_ID.
+             ============================================================ -->
+
+        <!--
+        <iframe
+          data-tally-src="https://tally.so/embed/TALLY_FORM_ID?transparentBackground=1&hideTitle=1"
+          loading="lazy"
+          width="100%"
+          height="600"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Join the waitlist">
+        </iframe>
+        <script async src="https://tally.so/widgets/embed.js"></script>
+        -->
+
+        <!-- PLACEHOLDER FORM — styled but non-functional. Delete this
+             whole <form> once the Tally embed above is live. -->
+        <form class="waitlist-form reveal" aria-label="Waitlist signup (preview)" onsubmit="return false;">
+          <div class="field">
+            <label for="wf-name">Name</label>
+            <input id="wf-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="wf-email">Email</label>
+            <input id="wf-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="wf-phone">Phone <span class="field__opt">(optional)</span></label>
+            <input id="wf-phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="wf-occasion">Occasion</label>
+            <select id="wf-occasion" name="occasion">
+              <option value="">Select one…</option>
+              <option>Anniversary</option>
+              <option>Birthday</option>
+              <option>Bachelorette</option>
+              <option>Rehearsal dinner</option>
+              <option>Corporate</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="wf-party">Party size</label>
+            <select id="wf-party" name="party_size">
+              <option value="">Select one…</option>
+              <option>4–6</option>
+              <option>7–12</option>
+              <option>13–25</option>
+              <option>25+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="wf-timing">Ideal timing</label>
+            <select id="wf-timing" name="timing">
+              <option value="">Select one…</option>
+              <option>Next 30 days</option>
+              <option>1–3 months</option>
+              <option>Just curious</option>
+            </select>
+          </div>
+          <button class="btn btn--primary btn--full" type="submit" disabled>Join the Waitlist</button>
+          <p class="form-note">Form goes live at launch.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         8. FOR CHEFS  (anchor section above the footer)
+         ============================================================ -->
+    <section class="section for-chefs" id="chefs">
+      <div class="prose reveal">
+        <p class="eyebrow eyebrow--light">For Chefs</p>
+        <h2 class="for-chefs__headline">Keep your name. Grow your bookings.</h2>
+        <p>
+          The Omakase Pass sends you the customers searching for exactly what you do —
+          private omakase and sushi experiences — without you lifting a marketing finger.
+          You keep your brand, your menu, and your pricing. We handle booking, deposits,
+          and logistics, and take a founding-chef commission of 12% only when an event
+          books. No exclusivity. No upfront cost. We're selecting a small founding roster
+          of Nashville chefs now.
+        </p>
+        <a class="btn btn--ghost-light" href="mailto:hello@theomakasepass.com?subject=Founding%20Chef%20—%20%5BYour%20Name%5D">Introduce yourself</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       7. FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand">The Omakase Pass — Nashville, TN</p>
+
+      <nav class="footer__links" aria-label="Footer">
+        <a href="https://instagram.com/omakasepass" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@omakasepass" target="_blank" rel="noopener">TikTok</a>
+        <a href="mailto:hello@theomakasepass.com">hello@theomakasepass.com</a>
+      </nav>
+
+      <nav class="footer__quiet" aria-label="More">
+        <a href="#chefs" data-scroll>For Chefs</a>
+        <a href="omakase.html">What is Omakase?</a>
+      </nav>
+
+      <p class="footer__copy">© 2026 The Omakase Pass</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
