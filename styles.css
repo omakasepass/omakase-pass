@@ -7,13 +7,13 @@
 :root {
   --rice: #F7F3EC;        /* warm rice-white — page background */
   --ink: #1C1A17;         /* near-black — primary text */
-  --indigo: #2B3A4A;      /* deep noren indigo — accent, buttons, links */
-  --indigo-deep: #1F2B38; /* hover states, dark sections */
-  --vermillion: #B5442E;  /* muted red — hanko stamp detail ONLY */
+  --forest: #2D3E31;      /* deep pine green — accent, buttons, links */
+  --forest-deep: #1F2B22; /* hover states, dark sections */
+  --vermillion: #B5442E;  /* muted red — hanko "sun" stamp detail ONLY */
   --stone: #E8E2D6;       /* warm light grey — cards, dividers */
 
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Shippori Mincho", Georgia, "Times New Roman", serif;
+  --font-body: "Zen Kaku Gothic New", system-ui, -apple-system, sans-serif;
 
   --maxw: 1100px;         /* outer content width on desktop */
   --prosew: 680px;        /* narrow width for reading blocks */
@@ -51,11 +51,11 @@ h1, h2, h3 {
 p { margin: 0 0 1.2em; }
 p:last-child { margin-bottom: 0; }
 
-a { color: var(--indigo); }
+a { color: var(--forest); }
 
 /* Visible keyboard focus for everyone using Tab */
 :focus-visible {
-  outline: 3px solid var(--indigo);
+  outline: 3px solid var(--forest);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -65,7 +65,7 @@ a { color: var(--indigo); }
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--indigo);
+  background: var(--forest);
   color: var(--rice);
   padding: 0.75rem 1rem;
   z-index: 100;
@@ -92,10 +92,10 @@ a { color: var(--indigo); }
 
 .eyebrow {
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--indigo);
+  color: var(--forest);
   margin-bottom: 1.25rem;
 }
 .eyebrow--light { color: var(--stone); opacity: 0.85; }
@@ -104,7 +104,7 @@ a { color: var(--indigo); }
 .btn {
   display: inline-block;
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
   letter-spacing: 0.01em;
   text-decoration: none;
@@ -116,11 +116,11 @@ a { color: var(--indigo); }
 }
 
 .btn--primary {
-  background: var(--indigo);
+  background: var(--forest);
   color: var(--rice);
 }
 .btn--primary:hover {
-  background: var(--indigo-deep);
+  background: var(--forest-deep);
   transform: translateY(-1px);
 }
 .btn--primary:active { transform: translateY(0); }
@@ -162,7 +162,7 @@ a { color: var(--indigo); }
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-color: var(--indigo-deep);
+  background-color: var(--forest-deep);
   background-image: url("images/hero.jpg");
   background-size: cover;
   background-position: center;
@@ -197,7 +197,7 @@ a { color: var(--indigo); }
 
 .wordmark {
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.8rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -284,7 +284,7 @@ a { color: var(--indigo); }
 
 .pass-card__img {
   aspect-ratio: 3 / 2;
-  background: var(--indigo-deep);
+  background: var(--forest-deep);
   background-size: cover;
   background-position: center;
   /* placeholder label when no image is present */
@@ -303,10 +303,10 @@ a { color: var(--indigo); }
   justify-content: space-between;
   gap: 1rem;
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--indigo);
+  color: var(--forest);
   margin-bottom: 1rem;
 }
 
@@ -331,7 +331,7 @@ a { color: var(--indigo); }
 }
 .pass-card__desc { margin-bottom: 1.1rem; }
 .pass-card__price {
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 0.4rem;
 }
 .pass-card__note {
@@ -352,7 +352,7 @@ a { color: var(--indigo); }
    8. TRUST BLOCK (dark section)
    ============================================================ */
 .trust {
-  background: var(--indigo-deep);
+  background: var(--forest-deep);
   color: var(--rice);
 }
 .trust__headline {
@@ -389,11 +389,11 @@ a { color: var(--indigo); }
   justify-content: center;
   width: 2.4rem;
   height: 2.4rem;
-  border: 1px solid var(--indigo);
+  border: 1px solid var(--forest);
   border-radius: 50%;
   font-family: var(--font-display);
   font-weight: 600;
-  color: var(--indigo);
+  color: var(--forest);
   margin-bottom: 0.9rem;
 }
 .step__title {
@@ -431,7 +431,7 @@ a { color: var(--indigo); }
 .field { display: flex; flex-direction: column; gap: 0.4rem; }
 .field label {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 .field__opt { font-weight: 400; color: rgba(28, 26, 23, 0.55); }
@@ -448,8 +448,8 @@ a { color: var(--indigo); }
 }
 .field input:focus,
 .field select:focus {
-  border-color: var(--indigo);
-  outline: 2px solid var(--indigo);
+  border-color: var(--forest);
+  outline: 2px solid var(--forest);
   outline-offset: 1px;
 }
 
@@ -464,7 +464,7 @@ a { color: var(--indigo); }
    11. FOR CHEFS (dark section)
    ============================================================ */
 .for-chefs {
-  background: var(--indigo);
+  background: var(--forest);
   color: var(--rice);
 }
 .for-chefs__headline {
@@ -529,7 +529,7 @@ a { color: var(--indigo); }
 .back-link {
   display: inline-block;
   margin-top: 2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* ============================================================

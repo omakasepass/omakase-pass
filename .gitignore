@@ -20,3 +20,6 @@ node_modules/
 
 # Vercel
 .vercel/
+
+# Full-resolution image originals (kept locally, not deployed)
+images/_originals/
