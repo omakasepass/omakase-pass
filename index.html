@@ -404,10 +404,15 @@
         <script async src="https://tally.so/widgets/embed.js"></script>
         -->
 
-        <!-- WAITLIST FORM — submits via the visitor's email client (mailto),
-             so it works with no backend. To switch to an embedded Tally form
-             later, use the commented block above and delete this <form>. -->
-        <form class="waitlist-form reveal" id="waitlist-form" aria-label="Join the waitlist">
+        <!-- WAITLIST FORM — submits to Formspree via AJAX (see script at the
+             bottom of this file). Keeps this custom design; no page reload.
+             Connected to Formspree form "Omakase Waitlist" (id mqerkaqg). -->
+        <form class="waitlist-form reveal" id="waitlist-form" aria-label="Join the waitlist"
+              action="https://formspree.io/f/mqerkaqg" method="POST">
+          <!-- Sets the subject line of the email Formspree sends you. -->
+          <input type="hidden" name="_subject" value="New Omakase Pass waitlist signup" />
+          <!-- Honeypot anti-spam field: hidden from people, tempting to bots. Leave empty. -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
           <div class="field">
             <label for="wf-name">Name</label>
             <input id="wf-name" name="name" type="text" autocomplete="name" required />
@@ -452,7 +457,7 @@
             </select>
           </div>
           <button class="btn btn--primary btn--full" type="submit">Join the Waitlist</button>
-          <p class="form-note">Opens your email to send us your details. We reply personally, usually within a few days.</p>
+          <p class="form-note">We reply personally, usually within a few days.</p>
         </form>
       </div>
     </section>
@@ -493,32 +498,36 @@
 
   <script src="script.js"></script>
 
-  <!-- Waitlist form: build a prefilled email and open the visitor's mail
-       client (mailto). No backend; nothing sends until they hit send. -->
+  <!-- Waitlist form: submit to Formspree via AJAX so the visitor stays on the
+       page. On success the form is replaced with a confirmation message. -->
   <script>
     (function () {
       var form = document.getElementById('waitlist-form');
       if (!form) return;
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        var val = function (id) {
-          var el = document.getElementById(id);
-          return el ? el.value.trim() : '';
-        };
-        var name = val('wf-name');
-        var lines = [
-          'Name: ' + name,
-          'Email: ' + val('wf-email'),
-          'Phone: ' + val('wf-phone'),
-          'Occasion: ' + val('wf-occasion'),
-          'Party size: ' + val('wf-party'),
-          'Ideal timing: ' + val('wf-timing')
-        ];
-        var subject = 'Waitlist: ' + (name || '[Name]');
-        window.location.href =
-          'mailto:hello@theomakasepass.com' +
-          '?subject=' + encodeURIComponent(subject) +
-          '&body=' + encodeURIComponent(lines.join('\n'));
+        var btn = form.querySelector('button[type="submit"]');
+        var original = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (!res.ok) throw new Error('bad response');
+          form.innerHTML =
+            '<p class="form-success">You\'re on the list. We\'ll be in touch personally.</p>';
+        }).catch(function () {
+          if (btn) { btn.disabled = false; btn.textContent = original; }
+          var err = form.querySelector('.form-error');
+          if (!err) {
+            err = document.createElement('p');
+            err.className = 'form-error';
+            form.appendChild(err);
+          }
+          err.textContent =
+            'Something went wrong. Please email hello@theomakasepass.com and we\'ll add you.';
+        });
       });
     })();
   </script>

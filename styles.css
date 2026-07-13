@@ -653,6 +653,21 @@ a { color: var(--forest); }
   color: rgba(28, 26, 23, 0.6);
   margin: 0.75rem 0 0;
 }
+.form-success {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  line-height: 1.35;
+  color: var(--forest);
+  margin: 0;
+  padding: 1.25rem 0;
+}
+.form-error {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--vermillion);
+  margin: 0.9rem 0 0;
+}
 
 /* ============================================================
    14. MOTION — only for users who haven't asked to reduce it
