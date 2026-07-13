@@ -41,8 +41,8 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- ============================================================
-       FONTS (Google Fonts: Fraunces for headlines, Instrument Sans
-       for everything else). Preconnect speeds up loading.
+       FONTS (Google Fonts: Shippori Mincho for headlines, Zen Kaku
+       Gothic New for everything else). Preconnect speeds up loading.
        ============================================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -112,11 +112,8 @@
        1. HERO
        ============================================================ -->
   <header class="hero" id="top">
-    <!-- Full-bleed background image.
-         TODO: supply a licensed stock photo at /images/hero.jpg —
-         a dark/moody macro shot of a single piece of nigiri, in the
-         style of omakasetableatl.com. Until then a dark indigo
-         wash shows behind the overlay. -->
+    <!-- Full-bleed background image (images/hero.jpg). If it is ever
+         missing, a dark forest wash shows behind the overlay. -->
     <div class="hero__bg" role="img" aria-label="A single piece of nigiri, dark and moody"></div>
     <div class="hero__overlay"></div>
 
@@ -160,6 +157,24 @@
           your occasion. No restaurant reservation six weeks out. No traveling celebrity
           chef's calendar. Just a craftsman, your kitchen, and an evening made once, for you.
         </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOUNDER'S NOTE  (Part 1, item 4 — draft C selected; alternates
+         in the review summary)
+         ============================================================ -->
+    <section class="section founder" id="founder">
+      <div class="prose reveal">
+        <p class="eyebrow">Why we started this</p>
+        <p class="founder__body">
+          I started The Omakase Pass because some of my favorite nights have happened
+          around a sushi counter, with the people I love, watching a chef work. Omakase
+          was never really about the fish. It was about being there together, for an
+          evening that only happens once. I wanted more of those nights, for more people,
+          in their own homes.
+        </p>
+        <p class="founder__sign">Paolo · Founder</p>
       </div>
     </section>
 
@@ -282,13 +297,73 @@
     </section>
 
     <!-- ============================================================
+         FAQ  (Part 1, item 5 — draft answers; policy items flagged in
+         the review summary as unconfirmed)
+         ============================================================ -->
+    <section class="section faq" id="faq">
+      <div class="prose">
+        <h2 class="faq__headline reveal">Questions, answered.</h2>
+        <div class="faq__list reveal">
+          <details class="faq__item">
+            <summary>What's included in the price?</summary>
+            <div class="faq__answer">
+              <p>Everything but the table. Your chef brings the fish, the ingredients, and
+              their own tools, and handles preparation, service, and cleanup. You provide
+              the kitchen and the guests. Final quotes depend on your menu and party size.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>How far in advance should I book?</summary>
+            <div class="faq__answer">
+              <p>As much notice as you can give us helps. Each event is matched to an
+              individual chef's calendar, and weekends fill quickly, so earlier means more
+              options. Once we have your date, we'll confirm a chef who fits.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>What if I need to reschedule or cancel?</summary>
+            <div class="faq__answer">
+              <p>Plans change, and we'll always try to work with you. The exact deposit and
+              cancellation terms are confirmed in writing when you book.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Do I need to provide anything?</summary>
+            <div class="faq__answer">
+              <p>Just your kitchen and your guests. Your chef arrives with ingredients and
+              tools. Your everyday plates and glassware are usually perfect; if a menu calls
+              for anything special, we'll tell you well in advance.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>How are chefs vetted?</summary>
+            <div class="faq__answer">
+              <p>Every chef is independently vetted for skill, sourcing, and hospitality
+              before they ever cook for a guest. We'd rather represent five exceptional
+              chefs than fifty adequate ones.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>What about dietary restrictions or allergies?</summary>
+            <div class="faq__answer">
+              <p>Tell us when you reach out. Omakase is built around the chef reading the
+              room, and most needs, from vegetarian courses to shellfish allergies, can be
+              planned for. Serious allergies go straight to your chef so the whole table
+              can relax.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          6. WAITLIST FORM — the conversion point
          ============================================================ -->
     <section class="section waitlist" id="waitlist">
       <div class="prose">
         <h2 class="waitlist__headline reveal">Be first at the table.</h2>
         <p class="waitlist__sub reveal">
-          We're opening our first Nashville dates soon. Join the waitlist and we'll reach out personally.
+          Our founding roster is small by design, and early booking slots are limited. Join the waitlist and we'll reach out personally as dates open.
         </p>
 
         <!-- ============================================================
@@ -329,9 +404,10 @@
         <script async src="https://tally.so/widgets/embed.js"></script>
         -->
 
-        <!-- PLACEHOLDER FORM — styled but non-functional. Delete this
-             whole <form> once the Tally embed above is live. -->
-        <form class="waitlist-form reveal" aria-label="Waitlist signup (preview)" onsubmit="return false;">
+        <!-- WAITLIST FORM — submits via the visitor's email client (mailto),
+             so it works with no backend. To switch to an embedded Tally form
+             later, use the commented block above and delete this <form>. -->
+        <form class="waitlist-form reveal" id="waitlist-form" aria-label="Join the waitlist">
           <div class="field">
             <label for="wf-name">Name</label>
             <input id="wf-name" name="name" type="text" autocomplete="name" required />
@@ -375,8 +451,8 @@
               <option>Just curious</option>
             </select>
           </div>
-          <button class="btn btn--primary btn--full" type="submit" disabled>Join the Waitlist</button>
-          <p class="form-note">Form goes live at launch.</p>
+          <button class="btn btn--primary btn--full" type="submit">Join the Waitlist</button>
+          <p class="form-note">Opens your email to send us your details. We reply personally, usually within a few days.</p>
         </form>
       </div>
     </section>
@@ -387,16 +463,8 @@
     <section class="section for-chefs" id="chefs">
       <div class="prose reveal">
         <p class="eyebrow eyebrow--light">For Chefs</p>
-        <h2 class="for-chefs__headline">Keep your name. Grow your bookings.</h2>
-        <p>
-          The Omakase Pass sends you the customers searching for exactly what you do,
-          private omakase and sushi experiences, without you lifting a marketing finger.
-          You keep your brand, your menu, and your pricing. We handle booking, deposits,
-          and logistics, and take a founding-chef commission of 12% only when an event
-          books. No exclusivity. No upfront cost. We're selecting a small founding roster
-          of Nashville chefs now.
-        </p>
-        <a class="btn btn--ghost-light" href="mailto:hello@theomakasepass.com?subject=Founding%20Chef%3A%20%5BYour%20Name%5D">Introduce yourself</a>
+        <p class="for-chefs__line">Are you a Nashville sushi chef? We'd love to hear from you.</p>
+        <a class="btn btn--ghost-light" href="mailto:hello@theomakasepass.com?subject=Founding%20Chef%3A%20%5BYour%20Name%5D">Get in Touch</a>
       </div>
     </section>
   </main>
@@ -424,5 +492,35 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Waitlist form: build a prefilled email and open the visitor's mail
+       client (mailto). No backend; nothing sends until they hit send. -->
+  <script>
+    (function () {
+      var form = document.getElementById('waitlist-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var val = function (id) {
+          var el = document.getElementById(id);
+          return el ? el.value.trim() : '';
+        };
+        var name = val('wf-name');
+        var lines = [
+          'Name: ' + name,
+          'Email: ' + val('wf-email'),
+          'Phone: ' + val('wf-phone'),
+          'Occasion: ' + val('wf-occasion'),
+          'Party size: ' + val('wf-party'),
+          'Ideal timing: ' + val('wf-timing')
+        ];
+        var subject = 'Waitlist: ' + (name || '[Name]');
+        window.location.href =
+          'mailto:hello@theomakasepass.com' +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(lines.join('\n'));
+      });
+    })();
+  </script>
 </body>
 </html>
