@@ -570,8 +570,22 @@ a { color: var(--forest); }
    ============================================================ */
 .founder { background: var(--stone); }
 .founder__body { font-size: 1.15rem; }
+.founder__signature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.9rem;
+}
+.founder__photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+  box-shadow: 0 4px 14px rgba(28, 26, 23, 0.15);
+}
 .founder__sign {
-  margin-top: 1.6rem;
+  margin: 0;
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.16em;
