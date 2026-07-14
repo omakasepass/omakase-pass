@@ -743,6 +743,39 @@ a { color: var(--forest); }
 }
 
 /* ============================================================
+   13c. STICKY MOBILE CTA
+   Fixed to the bottom on small screens; revealed on scroll by JS.
+   Hidden entirely on desktop, where the inline CTAs are always near.
+   ============================================================ */
+.sticky-cta {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 50;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(28, 26, 23, 0.28);
+  /* Hidden until JS adds .is-visible */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(140%);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+.sticky-cta.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+/* Desktop: the page CTAs are never far, so the sticky bar isn't needed. */
+@media (min-width: 720px) {
+  .sticky-cta { display: none; }
+}
+/* Respect reduced-motion: appear/disappear without the slide. */
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta { transition: opacity 0.2s ease, visibility 0.2s; transform: none; }
+}
+
+/* ============================================================
    14. MOTION — only for users who haven't asked to reduce it
    ============================================================ */
 @media (prefers-reduced-motion: no-preference) {

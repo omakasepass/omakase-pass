@@ -50,6 +50,10 @@
 
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- Preload the hero background (a CSS background image, so it would
+       otherwise be discovered late) to protect Largest Contentful Paint. -->
+  <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high" />
+
   <!-- ============================================================
        ANALYTICS — Google Analytics 4 (property "The Omakase Pass",
        Measurement ID G-955D8J9147)
@@ -451,7 +455,7 @@
           </div>
           <div class="field">
             <label for="wf-package">Which experience?</label>
-            <select id="wf-package" name="package">
+            <select id="wf-package" name="package" required>
               <option value="">Select one…</option>
               <option>The Counter for Two (date night)</option>
               <option>The Omakase Table</option>
@@ -529,6 +533,10 @@
       <p class="footer__copy">© 2026 The Omakase Pass · Nashville</p>
     </div>
   </footer>
+
+  <!-- Sticky mobile call-to-action: appears once the hero scrolls away and
+       hides again as the waitlist form comes into view. Mobile only (CSS). -->
+  <a class="sticky-cta btn btn--primary" href="#waitlist" data-scroll>Join the Waitlist</a>
 
   <script src="script.js"></script>
 

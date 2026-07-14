@@ -35,6 +35,38 @@
     });
   });
 
+  /* ---- STICKY MOBILE CTA ----
+     Show the fixed "Join the Waitlist" button once the hero has scrolled
+     out of view, and hide it again as the waitlist form appears. Runs
+     regardless of motion preference — it's a control, not decoration. */
+  (function () {
+    var sticky = document.querySelector(".sticky-cta");
+    var hero = document.getElementById("top");
+    var waitlist = document.getElementById("waitlist");
+    if (!sticky || !hero || !waitlist || !("IntersectionObserver" in window)) return;
+
+    var heroVisible = true;
+    var waitlistVisible = false;
+
+    function update() {
+      if (!heroVisible && !waitlistVisible) {
+        sticky.classList.add("is-visible");
+      } else {
+        sticky.classList.remove("is-visible");
+      }
+    }
+
+    new IntersectionObserver(function (entries) {
+      heroVisible = entries[0].isIntersecting;
+      update();
+    }).observe(hero);
+
+    new IntersectionObserver(function (entries) {
+      waitlistVisible = entries[0].isIntersecting;
+      update();
+    }).observe(waitlist);
+  })();
+
   /* If reduced motion is on, make sure nothing stays hidden and
      stop here — no animations at all. */
   if (reduceMotion) {
