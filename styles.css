@@ -636,6 +636,12 @@ a { color: var(--forest); }
   max-width: 62ch;
   color: rgba(28, 26, 23, 0.78);
 }
+.faq__more {
+  margin-top: 1.6rem;
+  font-weight: 500;
+}
+.faq__more a { text-decoration: none; }
+.faq__more a:hover { text-decoration: underline; }
 
 /* ============================================================
    FOR CHEFS teaser (consumer homepage)
