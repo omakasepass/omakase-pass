@@ -99,12 +99,22 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "name": "The Counter for Two",
+            "description": "An intimate private omakase for two, prepared course by course at home. A flat rate of $400 for two guests."
+          },
+          "price": "400",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
             "name": "The Omakase Table",
-            "description": "A seated, chef-curated omakase tasting prepared course by course in your home. From $130 per person, $800 event minimum, parties of 4 to 12."
+            "description": "A seated, chef-curated omakase tasting prepared course by course in your home. $150 per person, $800 event minimum, up to 12 guests."
           },
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "130",
+            "price": "150",
             "priceCurrency": "USD",
             "unitText": "per person"
           }
@@ -114,7 +124,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "The Sushi Party",
-            "description": "A live in-home sushi station with a chef working the room. Handrolls, nigiri, and platters made continuously. From $85 per person, $600 event minimum, parties of 8 to 25."
+            "description": "A live in-home sushi station with a chef working the room. Handrolls, nigiri, and platters made continuously. $85 per person, $600 event minimum, up to 25 guests."
           },
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
@@ -207,22 +217,46 @@
     </section>
 
     <!-- ============================================================
-         3. THE EXPERIENCES — the two "Pass" cards
+         3. THE EXPERIENCES — the three "Pass" cards
          ============================================================ -->
     <section class="section experiences" id="experiences">
       <div class="container">
         <div class="cards">
 
-          <!-- Card 1 — Nº 001 -->
+          <!-- Card 1 — Nº 001 · The Counter for Two -->
           <article class="pass-card reveal">
             <div class="pass-card__media">
-              <!-- TODO: supply /images/tasting.jpg — a plated multi-course
-                   tasting, intimate and moody. -->
-              <div class="pass-card__img pass-card__img--tasting" role="img" aria-label="A multi-course omakase tasting plated course by course by a private chef at an in-home dinner"></div>
+              <div class="pass-card__img pass-card__img--date" role="img" aria-label="An intimate omakase dinner for two prepared by a private sushi chef at home"></div>
             </div>
             <div class="pass-card__body">
               <div class="pass-card__eyebrow">
                 <span>Omakase Pass · Nashville · Nº 001</span>
+                <span class="hanko" aria-hidden="true">
+                  <svg viewBox="0 0 100 100" width="100%" height="100%">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="4" />
+                    <text x="50" y="50" text-anchor="middle" dominant-baseline="central" class="hanko__text">OP</text>
+                  </svg>
+                </span>
+              </div>
+              <h2 class="pass-card__title">The Counter for Two</h2>
+              <p class="pass-card__desc">
+                An intimate omakase for two, prepared course by course at your own counter.
+                The full experience, with the chef's whole attention on your evening.
+              </p>
+              <p class="pass-card__price">$400 flat · a private omakase for two</p>
+              <p class="pass-card__note">Date nights · anniversaries · proposals · birthdays for two</p>
+              <a class="btn btn--primary" href="#waitlist" data-scroll>Reserve Interest</a>
+            </div>
+          </article>
+
+          <!-- Card 2 — Nº 002 · The Omakase Table -->
+          <article class="pass-card reveal">
+            <div class="pass-card__media">
+              <div class="pass-card__img pass-card__img--tasting" role="img" aria-label="A multi-course omakase tasting plated course by course by a private chef at an in-home dinner"></div>
+            </div>
+            <div class="pass-card__body">
+              <div class="pass-card__eyebrow">
+                <span>Omakase Pass · Nashville · Nº 002</span>
                 <!-- Hanko stamp: settles into place on scroll -->
                 <span class="hanko" aria-hidden="true">
                   <svg viewBox="0 0 100 100" width="100%" height="100%">
@@ -237,22 +271,20 @@
                 you. Nigiri, sashimi, and seasonal plates: the full counter experience,
                 at your table.
               </p>
-              <p class="pass-card__price">$130 per person · $800 event minimum · parties of 4–12</p>
+              <p class="pass-card__price">$150 per person · $800 event minimum · up to 12 guests</p>
               <p class="pass-card__note">Anniversaries · rehearsal dinners · milestone birthdays · client dinners</p>
               <a class="btn btn--primary" href="#waitlist" data-scroll>Reserve Interest</a>
             </div>
           </article>
 
-          <!-- Card 2 — Nº 002 -->
+          <!-- Card 3 — Nº 003 · The Sushi Party -->
           <article class="pass-card reveal">
             <div class="pass-card__media">
-              <!-- TODO: supply /images/party.jpg — a livelier rolling
-                   station, hands working, sushi in progress. -->
               <div class="pass-card__img pass-card__img--party" role="img" aria-label="A private sushi chef preparing handrolls at a live in-home sushi party in Nashville"></div>
             </div>
             <div class="pass-card__body">
               <div class="pass-card__eyebrow">
-                <span>Omakase Pass · Nashville · Nº 002</span>
+                <span>Omakase Pass · Nashville · Nº 003</span>
                 <span class="hanko" aria-hidden="true">
                   <svg viewBox="0 0 100 100" width="100%" height="100%">
                     <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="4" />
@@ -265,7 +297,7 @@
                 A live sushi station and a chef working the room. Handrolls, nigiri, and
                 platters made continuously: social, abundant, and unhurried.
               </p>
-              <p class="pass-card__price">$85 per person · $600 event minimum · parties of 8–25</p>
+              <p class="pass-card__price">$85 per person · $600 event minimum · up to 25 guests</p>
               <p class="pass-card__note">Bachelorette weekends · birthdays · celebrations of any kind</p>
               <a class="btn btn--primary" href="#waitlist" data-scroll>Reserve Interest</a>
             </div>
@@ -382,6 +414,15 @@
             </div>
           </details>
           <details class="faq__item">
+            <summary>Do you do private chef date nights or dinners for two?</summary>
+            <div class="faq__answer">
+              <p>Yes. The Counter for Two is a private omakase built for exactly that: a chef
+              prepares the full course-by-course experience for just the two of you, at home.
+              It's one of our most requested ways to mark an anniversary, a proposal, or
+              simply a night worth remembering.</p>
+            </div>
+          </details>
+          <details class="faq__item">
             <summary>Can you do a private sushi chef for a birthday party?</summary>
             <div class="faq__answer">
               <p>Yes. Birthdays are one of our most requested occasions, from a milestone
@@ -395,15 +436,16 @@
             <div class="faq__answer">
               <p>We do. A chef working the room with handrolls and nigiri made to order turns
               a bachelorette weekend into something people actually remember. The Sushi Party
-              is built for exactly this: social, abundant, and hands-on, for groups of 8 to 25.</p>
+              is built for exactly this: social, abundant, and hands-on, for up to 25 guests.</p>
             </div>
           </details>
           <details class="faq__item">
             <summary>Can I book a private chef for an anniversary or rehearsal dinner?</summary>
             <div class="faq__answer">
-              <p>Absolutely. For anniversaries, rehearsal dinners, and other milestone
-              evenings, The Omakase Table brings a seated, chef-curated tasting to your home,
-              course by course, with no restaurant reservation to plan around.</p>
+              <p>Absolutely. For an intimate anniversary, The Counter for Two brings a
+              private omakase for just the two of you. For a larger celebration or a
+              rehearsal dinner, The Omakase Table seats your whole group for a chef-curated
+              tasting, course by course, with no restaurant reservation to plan around.</p>
             </div>
           </details>
           <details class="faq__item">

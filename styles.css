@@ -309,6 +309,7 @@ a { color: var(--forest); }
   align-items: center;
   justify-content: center;
 }
+.pass-card__img--date { background-image: url("images/date.jpg"); }
 .pass-card__img--tasting { background-image: url("images/tasting.jpg"); }
 .pass-card__img--party { background-image: url("images/party.jpg"); }
 
