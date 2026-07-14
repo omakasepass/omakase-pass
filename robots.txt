@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /chefs
 Disallow: /chefs.html
 
 Sitemap: https://theomakasepass.com/sitemap.xml
