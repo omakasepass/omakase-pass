@@ -458,6 +458,9 @@
                  • Name          (short text, required)
                  • Email         (email, required)
                  • Phone         (short text / phone, optional)
+                 • Which experience? (dropdown: The Counter for Two /
+                                  The Omakase Table / The Sushi Party /
+                                  Not sure yet)
                  • Occasion      (dropdown: Anniversary / Birthday /
                                   Bachelorette / Rehearsal dinner /
                                   Corporate / Other)
@@ -507,6 +510,16 @@
           <div class="field">
             <label for="wf-phone">Phone <span class="field__opt">(optional)</span></label>
             <input id="wf-phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="wf-package">Which experience?</label>
+            <select id="wf-package" name="package">
+              <option value="">Select one…</option>
+              <option>The Counter for Two (date night)</option>
+              <option>The Omakase Table</option>
+              <option>The Sushi Party</option>
+              <option>Not sure yet</option>
+            </select>
           </div>
           <div class="field">
             <label for="wf-occasion">Occasion</label>
