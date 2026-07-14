@@ -1,0 +1,8 @@
+# The Omakase Pass — robots.txt
+# Allow the public site; keep the unlisted chef-recruiting page out of search.
+
+User-agent: *
+Allow: /
+Disallow: /chefs.html
+
+Sitemap: https://theomakasepass.com/sitemap.xml

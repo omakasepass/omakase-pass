@@ -74,32 +74,68 @@
   -->
 
   <!-- ============================================================
-       LOCAL BUSINESS SCHEMA (helps Google understand who/where you
-       are — improves local search results)
+       SERVICE SCHEMA (this is a service-area business, not a storefront,
+       so we use Service + areaServed rather than LocalBusiness with a
+       physical address. No address/phone is invented — see review notes.)
        ============================================================ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Service",
     "name": "The Omakase Pass",
-    "description": "Nashville's vetted collective of independent sushi chefs for private, in-home omakase experiences.",
+    "serviceType": "Private omakase and sushi chef experiences",
+    "description": "Private, in-home omakase and sushi chef experiences in Nashville. A vetted collective of independent sushi chefs for anniversaries, birthdays, bachelorette parties, rehearsal dinners, and corporate events.",
     "url": "https://theomakasepass.com",
-    "email": "hello@theomakasepass.com",
     "image": "https://theomakasepass.com/images/og.jpg",
-    "areaServed": {
-      "@type": "City",
-      "name": "Nashville"
+    "provider": {
+      "@type": "Organization",
+      "name": "The Omakase Pass",
+      "url": "https://theomakasepass.com",
+      "email": "hello@theomakasepass.com",
+      "sameAs": [
+        "https://instagram.com/omakasepass",
+        "https://tiktok.com/@omakasepass"
+      ]
     },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Nashville",
-      "addressRegion": "TN",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://instagram.com/omakasepass",
-      "https://tiktok.com/@omakasepass"
-    ]
+    "areaServed": [
+      { "@type": "City", "name": "Nashville", "containedInPlace": { "@type": "State", "name": "Tennessee" } },
+      { "@type": "City", "name": "Franklin", "containedInPlace": { "@type": "State", "name": "Tennessee" } },
+      { "@type": "City", "name": "Brentwood", "containedInPlace": { "@type": "State", "name": "Tennessee" } }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Private omakase experiences",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "The Omakase Table",
+            "description": "A seated, chef-curated omakase tasting prepared course by course in your home. From $130 per person, $800 event minimum, parties of 4 to 12."
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "130",
+            "priceCurrency": "USD",
+            "unitText": "per person"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "The Sushi Party",
+            "description": "A live in-home sushi station with a chef working the room. Handrolls, nigiri, and platters made continuously. From $85 per person, $600 event minimum, parties of 8 to 25."
+          },
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "85",
+            "priceCurrency": "USD",
+            "unitText": "per person"
+          }
+        }
+      ]
+    }
   }
   </script>
 </head>
@@ -114,7 +150,7 @@
   <header class="hero" id="top">
     <!-- Full-bleed background image (images/hero.jpg). If it is ever
          missing, a dark forest wash shows behind the overlay. -->
-    <div class="hero__bg" role="img" aria-label="A single piece of nigiri, dark and moody"></div>
+    <div class="hero__bg" role="img" aria-label="A piece of nigiri sushi lifted with chopsticks at a private omakase dinner"></div>
     <div class="hero__overlay"></div>
 
     <div class="hero__inner">
@@ -190,7 +226,7 @@
             <div class="pass-card__media">
               <!-- TODO: supply /images/tasting.jpg — a plated multi-course
                    tasting, intimate and moody. -->
-              <div class="pass-card__img pass-card__img--tasting" role="img" aria-label="A plated multi-course omakase tasting"></div>
+              <div class="pass-card__img pass-card__img--tasting" role="img" aria-label="A multi-course omakase tasting plated course by course by a private chef at an in-home dinner"></div>
             </div>
             <div class="pass-card__body">
               <div class="pass-card__eyebrow">
@@ -220,7 +256,7 @@
             <div class="pass-card__media">
               <!-- TODO: supply /images/party.jpg — a livelier rolling
                    station, hands working, sushi in progress. -->
-              <div class="pass-card__img pass-card__img--party" role="img" aria-label="A live sushi station with a chef working"></div>
+              <div class="pass-card__img pass-card__img--party" role="img" aria-label="A private sushi chef preparing handrolls at a live in-home sushi party in Nashville"></div>
             </div>
             <div class="pass-card__body">
               <div class="pass-card__eyebrow">
