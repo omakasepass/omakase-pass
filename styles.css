@@ -693,11 +693,14 @@ a { color: var(--forest); }
    ============================================================ */
 .exp__img {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  /* A constrained banner so the image supports the copy rather than
+     dominating it — details stay near the top of the page. */
+  height: clamp(200px, 34vh, 340px);
   object-fit: cover;
+  object-position: center;
   border-radius: 8px;
   box-shadow: var(--shadow-card);
-  margin: 0 0 2rem;
+  margin: 1.5rem 0 2rem;
 }
 .exp__lede { font-size: 1.2rem; }
 .exp__price {
