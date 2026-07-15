@@ -1,8 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
-    { "source": "/counter-for-two", "destination": "/signature-sushi-delivery", "permanent": true }
-  ]
+  "trailingSlash": false
 }
