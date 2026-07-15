@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2D3E31" />
+
+  <title>Private Omakase &amp; Sushi Chef at Home — Atlanta (Coming Soon) | The Omakase Pass</title>
+  <meta name="description" content="The Omakase Pass is bringing a private sushi chef and omakase at home to Atlanta — for anniversaries, bachelorette parties, and birthdays. Join the Atlanta waitlist." />
+  <link rel="canonical" href="https://theomakasepass.com/atlanta" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Omakase Pass" />
+  <meta property="og:title" content="Private Omakase & Sushi Chef at Home — Coming to Atlanta" />
+  <meta property="og:description" content="A sushi chef at your counter, course by course, in your own home. The Omakase Pass is coming to Atlanta. Join the waitlist." />
+  <meta property="og:url" content="https://theomakasepass.com/atlanta" />
+  <meta property="og:image" content="https://theomakasepass.com/images/og.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Private Omakase & Sushi Chef at Home — Coming to Atlanta" />
+  <meta name="twitter:description" content="A sushi chef at your counter, course by course, in your own home. The Omakase Pass is coming to Atlanta." />
+  <meta name="twitter:image" content="https://theomakasepass.com/images/og.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics 4 (property "The Omakase Pass") -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-955D8J9147"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-955D8J9147');
+  </script>
+
+  <!-- Service schema for the planned Atlanta service area. No prices yet:
+       Atlanta pricing is confirmed at launch. Wording is kept honest
+       ("coming soon") so nothing overclaims an active service. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "The Omakase Pass — Private Omakase in Atlanta (Coming Soon)",
+    "serviceType": "Private omakase and sushi chef experiences",
+    "description": "Private, in-home omakase and sushi chef experiences coming soon to Atlanta, Georgia. A vetted collective of independent sushi chefs for anniversaries, birthdays, bachelorette parties, and rehearsal dinners. Join the Atlanta waitlist.",
+    "url": "https://theomakasepass.com/atlanta",
+    "image": "https://theomakasepass.com/images/og.jpg",
+    "provider": {
+      "@type": "Organization",
+      "name": "The Omakase Pass",
+      "url": "https://theomakasepass.com",
+      "email": "hello@theomakasepass.com"
+    },
+    "areaServed": { "@type": "City", "name": "Atlanta", "containedInPlace": { "@type": "State", "name": "Georgia" } }
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#waitlist">Skip to waitlist</a>
+
+  <main class="page exp" id="content">
+    <p class="eyebrow">The Omakase Pass · Coming to Atlanta</p>
+    <h1>Private omakase and a sushi chef at home — coming to Atlanta.</h1>
+
+    <img class="exp__img" src="images/hero.jpg" width="1440" height="1800"
+         alt="A piece of nigiri sushi lifted with chopsticks at a private omakase dinner" />
+
+    <p class="exp__lede">
+      The counter is coming to Atlanta. A sushi chef arrives at your home and works in front
+      of you, serving the best of the day's catch course by course — omakase the way it was
+      meant to unfold: unhurried, personal, and made for your table alone.
+    </p>
+
+    <p>
+      In Japan, omakase rests on a simple covenant: the guest entrusts the meal to the chef,
+      and the chef answers with the best of that day — that fish, that season, that moment.
+      The tradition has a name for it: <em>ichi-go ichi-e</em>, one time, one meeting. A meal
+      that will never happen the same way twice. It's that moment we bring to your table.
+    </p>
+    <p>
+      We're assembling a small, vetted collective of Atlanta's most talented independent
+      sushi chefs, the same way we did in Nashville — matching one chef to your occasion, in
+      your own home. An intimate omakase for two for a date night or proposal, a seated
+      chef-curated tasting for an anniversary or rehearsal dinner, or a live sushi station
+      working the room for a bachelorette weekend or birthday. No restaurant reservation, no
+      traveling celebrity chef's calendar. Just a craftsman, your kitchen, and an evening
+      made once, for you.
+    </p>
+    <p>
+      We're taking names now, ahead of our first Atlanta events. Join the list and we'll
+      reach out personally as chefs are confirmed and dates open.
+    </p>
+  </main>
+
+  <!-- ============================================================
+       ATLANTA WAITLIST — submits to the same Formspree endpoint as the
+       Nashville waitlist, tagged with a hidden city field so Atlanta
+       interest is easy to filter. AJAX submit keeps the visitor here.
+       ============================================================ -->
+  <section class="section waitlist" id="waitlist">
+    <div class="prose">
+      <h2 class="waitlist__headline">Be first at the table in Atlanta.</h2>
+      <p class="waitlist__sub">
+        We're launching in Atlanta soon and our founding roster is small by design. Join the
+        Atlanta waitlist and we'll be in touch personally as dates open.
+      </p>
+
+      <form class="waitlist-form" id="atlanta-form" aria-label="Join the Atlanta waitlist"
+            action="https://formspree.io/f/mqerkaqg" method="POST">
+        <input type="hidden" name="_subject" value="New Atlanta waitlist signup" />
+        <input type="hidden" name="city" value="Atlanta" />
+        <!-- Honeypot anti-spam field: hidden from people, tempting to bots. Leave empty. -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
+        <div class="field">
+          <label for="af-name">Name</label>
+          <input id="af-name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="af-email">Email</label>
+          <input id="af-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="af-occasion">Occasion <span class="field__opt">(optional)</span></label>
+          <select id="af-occasion" name="occasion">
+            <option value="">Select one…</option>
+            <option>Anniversary</option>
+            <option>Birthday</option>
+            <option>Bachelorette</option>
+            <option>Rehearsal dinner</option>
+            <option>Corporate</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="af-timing">Ideal timing <span class="field__opt">(optional)</span></label>
+          <select id="af-timing" name="timing">
+            <option value="">Select one…</option>
+            <option>Next 30 days</option>
+            <option>1–3 months</option>
+            <option>Just curious</option>
+          </select>
+        </div>
+        <button class="btn btn--primary btn--full" type="submit">Join the Atlanta Waitlist</button>
+        <p class="form-note">We reply personally, usually within a few days.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand">The Omakase Pass · Nashville &amp; Atlanta</p>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="https://instagram.com/omakasepass" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@omakasepass" target="_blank" rel="noopener">TikTok</a>
+        <a href="mailto:hello@theomakasepass.com">hello@theomakasepass.com</a>
+      </nav>
+      <nav class="footer__quiet" aria-label="More">
+        <a href="/">Nashville</a>
+        <a href="/omakase">What is Omakase?</a>
+        <a href="/faqs">FAQs</a>
+      </nav>
+      <p class="footer__copy">© 2026 The Omakase Pass</p>
+    </div>
+  </footer>
+
+  <!-- Atlanta waitlist AJAX submit (mirrors the homepage waitlist script). -->
+  <script>
+    (function () {
+      var form = document.getElementById('atlanta-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        var original = btn ? btn.textContent : '';
+        if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (!res.ok) throw new Error('bad response');
+          form.innerHTML =
+            '<p class="form-success">You\'re on the Atlanta list. We\'ll be in touch personally.</p>';
+        }).catch(function () {
+          if (btn) { btn.disabled = false; btn.textContent = original; }
+          var err = form.querySelector('.form-error');
+          if (!err) {
+            err = document.createElement('p');
+            err.className = 'form-error';
+            form.appendChild(err);
+          }
+          err.textContent =
+            'Something went wrong. Please email hello@theomakasepass.com and we\'ll add you.';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
