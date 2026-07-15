@@ -637,6 +637,57 @@ a { color: var(--forest); }
 }
 
 /* ============================================================
+   13a. LOCATIONS HUB (/locations)
+   A directory of the cities we serve, each linking to its city page.
+   ============================================================ */
+.loc-grid {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .loc-grid { grid-template-columns: 1fr 1fr; }
+}
+.loc-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.6rem 1.5rem;
+  background: var(--stone);
+  border-radius: 8px;
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.18s ease;
+}
+.loc-card:hover { transform: translateY(-2px); }
+.loc-card__status {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(28, 26, 23, 0.55);
+}
+.loc-card__status--live { color: var(--forest); }
+.loc-card__city {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+.loc-card__area {
+  font-size: 0.95rem;
+  color: rgba(28, 26, 23, 0.7);
+}
+.loc-card__go {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--forest);
+}
+
+/* ============================================================
    13b. EXPERIENCE PAGES (/counter-for-two, /omakase-table, /sushi-party)
    Built on the .page prose column, with a lead image and details.
    ============================================================ */
