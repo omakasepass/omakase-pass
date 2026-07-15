@@ -35,6 +35,40 @@
     });
   });
 
+  /* ---- SITE MENU (hero, top-right) ----
+     Toggle the dropdown; close on outside click or Escape. Only runs on
+     pages that actually have the menu (the landing page). */
+  (function () {
+    var btn = document.getElementById("menu-btn");
+    var panel = document.getElementById("site-menu");
+    if (!btn || !panel) return;
+
+    function closeMenu() {
+      btn.setAttribute("aria-expanded", "false");
+      panel.hidden = true;
+    }
+    function openMenu() {
+      btn.setAttribute("aria-expanded", "true");
+      panel.hidden = false;
+    }
+
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      if (panel.hidden) openMenu(); else closeMenu();
+    });
+    document.addEventListener("click", function (e) {
+      if (!panel.hidden && !panel.contains(e.target) && e.target !== btn) {
+        closeMenu();
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !panel.hidden) {
+        closeMenu();
+        btn.focus();
+      }
+    });
+  })();
+
   /* ---- STICKY MOBILE CTA ----
      Show the fixed "Join the Waitlist" button once the hero has scrolled
      out of view, and hide it again as the waitlist form appears. Runs

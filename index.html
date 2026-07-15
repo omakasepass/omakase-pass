@@ -157,7 +157,24 @@
     <div class="hero__overlay"></div>
 
     <div class="hero__inner">
-      <div class="wordmark reveal-hero">The Omakase Pass</div>
+      <div class="hero__topbar reveal-hero">
+        <div class="wordmark">The Omakase Pass</div>
+
+        <nav class="menu" aria-label="Site menu">
+          <button class="menu__btn" id="menu-btn" type="button"
+                  aria-haspopup="true" aria-expanded="false" aria-controls="site-menu">
+            Menu
+            <svg class="menu__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true">
+              <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </button>
+          <ul class="menu__panel" id="site-menu" hidden>
+            <li><a href="/faqs">FAQs</a></li>
+            <li><a href="/atlanta">Atlanta</a></li>
+            <li><a href="/omakase">What is Omakase?</a></li>
+          </ul>
+        </nav>
+      </div>
 
       <div class="hero__content">
         <p class="hero__eyebrow reveal-hero">Private Omakase · Nashville</p>
