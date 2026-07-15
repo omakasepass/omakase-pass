@@ -428,37 +428,37 @@ a { color: var(--forest); }
   margin-bottom: 1.4rem;
 }
 
-/* Spec rows: minimum, guests, and (last) price per head. Price comes last
-   by design, so the card leads with the experience and occasion. */
+/* Detail "stub": minimum, guests, and (last) price per head. Pinned to the
+   bottom of the card so all three stubs align into one clean row, and led
+   by a dashed rule that echoes the ticket's perforated edge. Price sits last
+   and quiet, so the card leads with the experience and the occasion. */
 .pass-card__specs {
   margin: 0 0 1.4rem;
-  border-top: 1px solid rgba(28, 26, 23, 0.12);
+  padding-top: 1.2rem;
+  border-top: 1px dashed rgba(28, 26, 23, 0.28);
 }
 .pass-card__specs .spec {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(28, 26, 23, 0.12);
+  padding: 0.4rem 0;
 }
 .pass-card__specs dt {
   margin: 0;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(28, 26, 23, 0.55);
+  color: rgba(28, 26, 23, 0.5);
 }
 .pass-card__specs dd {
   margin: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem;
   text-align: right;
+  color: var(--ink);
 }
-.pass-card__specs .spec--price dd {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-}
+/* The price is the last, quiet line: a touch of weight, no size jump. */
+.pass-card__specs .spec--price dd { font-weight: 500; }
 
 .pricing-note {
   text-align: center;
@@ -1015,8 +1015,10 @@ a { color: var(--forest); }
     flex: 1;
     padding: 2rem 1.9rem 2.25rem;
   }
-  /* Push the CTA to the bottom so both cards align */
-  .pass-card__body .btn { margin-top: auto; align-self: flex-start; }
+  /* Pin the detail stub (and everything below it) to the bottom so the
+     stubs align across cards regardless of description length. */
+  .pass-card__body .pass-card__specs { margin-top: auto; }
+  .pass-card__body .btn { align-self: flex-start; }
 
   .steps {
     flex-direction: row;
