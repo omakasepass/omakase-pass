@@ -570,8 +570,10 @@
 
   <script src="script.js"></script>
 
-  <!-- Waitlist form: submit to Formspree via AJAX so the visitor stays on the
-       page. On success the form is replaced with a confirmation message. -->
+  <!-- Waitlist form: submit to Formspree via AJAX (Formspree free tier locks
+       its own redirect field, so we redirect client-side). On success the
+       visitor is sent to the unlisted /thanks page. With JavaScript disabled
+       the form posts to Formspree directly, which shows its own confirmation. -->
   <script>
     (function () {
       var form = document.getElementById('waitlist-form');
@@ -587,8 +589,7 @@
           headers: { 'Accept': 'application/json' }
         }).then(function (res) {
           if (!res.ok) throw new Error('bad response');
-          form.innerHTML =
-            '<p class="form-success">You\'re on the list. We\'ll be in touch personally.</p>';
+          window.location.assign('/thanks');
         }).catch(function () {
           if (btn) { btn.disabled = false; btn.textContent = original; }
           var err = form.querySelector('.form-error');

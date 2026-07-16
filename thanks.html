@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you · The Omakase Pass</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Zen+Old+Mincho:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4f1ea;         /* site cream ground */
+    --paper-warm: #efeae0;    /* faint warmth for the radial */
+    --ink: #23231e;           /* warm near-black text */
+    --ink-dim: rgba(35, 35, 30, 0.62);
+    --ink-faint: rgba(35, 35, 30, 0.34);
+    --forest: #2b2f25;        /* site's deep olive-green accent */
+    --forest-soft: rgba(43, 47, 37, 0.4);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --mincho: 'Zen Old Mincho', serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* barely-there radial warmth on the cream, like light on paper */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 75% 65% at 50% 40%, var(--paper) 0%, var(--paper-warm) 100%);
+    z-index: 0;
+  }
+
+  .stage {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    max-width: 640px;
+    width: 100%;
+  }
+
+  /* seal mark */
+  .seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid var(--forest);
+    color: var(--forest);
+    font-family: var(--mincho);
+    font-size: 1.1rem;
+    border-radius: 3px;
+    margin-bottom: 3.2rem;
+    opacity: 0;
+    animation: fade 0.7s ease forwards;
+    animation-delay: 0.1s;
+  }
+
+  .kanji {
+    font-family: var(--mincho);
+    font-size: clamp(3.4rem, 12vw, 6.2rem);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    line-height: 1;
+    /* nudge right to visually center despite letter-spacing on last glyph */
+    text-indent: 0.18em;
+    color: var(--ink);
+    opacity: 0;
+    animation: rise 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.35s;
+  }
+
+  .romaji {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+    letter-spacing: 0.32em;
+    text-indent: 0.32em;
+    color: var(--ink-dim);
+    margin-top: 1.6rem;
+    text-transform: lowercase;
+    opacity: 0;
+    animation: fade 0.8s ease forwards;
+    animation-delay: 0.9s;
+  }
+
+  .rule {
+    width: 0;
+    height: 1px;
+    background: var(--ink-faint);
+    margin: 2.4rem auto;
+    animation: grow 0.7s ease forwards;
+    animation-delay: 1.25s;
+  }
+
+  .meaning {
+    font-size: clamp(1.25rem, 4vw, 1.7rem);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--ink);
+    max-width: 30ch;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fade 0.9s ease forwards;
+    animation-delay: 1.5s;
+  }
+
+  .meaning .accent { color: var(--forest); font-style: italic; }
+
+  .confirm {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+    color: var(--ink-dim);
+    max-width: 40ch;
+    margin: 3.4rem auto 0;
+    opacity: 0;
+    animation: fade 0.9s ease forwards;
+    animation-delay: 1.9s;
+  }
+
+  .signoff {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--paper-faint);
+    margin-top: 3rem;
+    opacity: 0;
+    animation: fade 2s ease forwards;
+    animation-delay: 4s;
+  }
+
+  @keyframes fade { to { opacity: 1; } }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes grow { to { width: 54px; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .seal, .kanji, .romaji, .rule, .meaning, .confirm, .signoff {
+      animation: none;
+      opacity: 1;
+    }
+    .rule { width: 54px; }
+    .kanji { transform: none; }
+  }
+</style>
+</head>
+<body>
+  <main class="stage">
+    <div class="seal" aria-hidden="true">縁</div>
+    <div class="kanji" lang="ja">一期一会</div>
+    <div class="romaji">ichi-go&nbsp;ichi-e</div>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="meaning">One meeting. <span class="accent">One moment.</span><br>Never to be repeated.</p>
+    <p class="confirm">
+      We've received your request, and it's already in good hands.
+      One of our chefs will be in touch to begin shaping your evening.
+    </p>
+  </main>
+</body>
+</html>
