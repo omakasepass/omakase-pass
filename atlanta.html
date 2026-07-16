@@ -167,7 +167,9 @@
     </div>
   </footer>
 
-  <!-- Atlanta waitlist AJAX submit (mirrors the homepage waitlist script). -->
+  <!-- Atlanta waitlist AJAX submit (mirrors the homepage waitlist script):
+       on a successful Formspree POST, redirect to the unlisted /thanks page.
+       With JavaScript disabled the form posts to Formspree directly. -->
   <script>
     (function () {
       var form = document.getElementById('atlanta-form');
@@ -183,8 +185,7 @@
           headers: { 'Accept': 'application/json' }
         }).then(function (res) {
           if (!res.ok) throw new Error('bad response');
-          form.innerHTML =
-            '<p class="form-success">You\'re on the Atlanta list. We\'ll be in touch personally.</p>';
+          window.location.assign('/thanks');
         }).catch(function () {
           if (btn) { btn.disabled = false; btn.textContent = original; }
           var err = form.querySelector('.form-error');
