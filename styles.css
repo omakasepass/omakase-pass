@@ -198,10 +198,10 @@ a { color: var(--forest); }
 }
 
 .wordmark {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.8rem;
-  letter-spacing: 0.22em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   padding-top: 1rem;
 }
