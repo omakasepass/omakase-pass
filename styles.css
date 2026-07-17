@@ -338,6 +338,40 @@ a { color: var(--forest); }
    ============================================================ */
 .experiences { background: var(--rice); }
 
+/* Intro that frames the three cards as one service, three formats. */
+.experiences__intro {
+  max-width: var(--prosew);
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.experiences__headline {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+.experiences__sub {
+  font-size: 1.1rem;
+  color: rgba(28, 26, 23, 0.8);
+  max-width: 36em;
+  margin: 0 auto;
+}
+
+/* "Signature" flag on the flagship card. Forest, never vermillion: the
+   hanko is the one vermillion mark per view. */
+.pass-card__flag {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  border: 1px solid rgba(45, 62, 49, 0.35);
+  border-radius: 3px;
+  padding: 0.28rem 0.55rem;
+  margin-bottom: 0.85rem;
+}
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -625,6 +659,13 @@ a { color: var(--forest); }
   font-family: var(--font-display);
   font-size: 1.15rem;
   margin: 0;
+}
+.footer__descriptor {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: rgba(247, 243, 236, 0.6);
 }
 .footer__links,
 .footer__quiet {
